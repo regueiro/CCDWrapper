@@ -3,7 +3,7 @@ using System;
 namespace MultiMonitorHelper.DisplayModels.Win7.Enum
 {
     [Flags]
-    public enum DisplayConfigModeInfoType : uint
+    internal enum DisplayConfigModeInfoType : uint
     {
         Zero = 0,
 

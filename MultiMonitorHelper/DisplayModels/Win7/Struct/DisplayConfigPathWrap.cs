@@ -5,7 +5,7 @@ namespace MultiMonitorHelper.DisplayModels.Win7.Struct
     /// <summary>
     /// This class is used in order to wrap path and mode info.
     /// </summary>
-    public struct DisplayConfigPathWrap
+    internal struct DisplayConfigPathWrap
     {
         /// <summary>
         /// Holds display path.

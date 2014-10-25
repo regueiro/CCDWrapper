@@ -4,7 +4,7 @@ using MultiMonitorHelper.DisplayModels.Win7.Enum;
 namespace MultiMonitorHelper.DisplayModels.Win7.Struct
 {
     [StructLayout(LayoutKind.Sequential)]
-    public struct DisplayConfigPathSourceInfo
+    internal struct DisplayConfigPathSourceInfo
     {
         public LUID adapterId;
         public uint id;

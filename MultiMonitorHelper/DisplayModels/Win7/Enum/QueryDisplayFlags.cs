@@ -3,7 +3,7 @@ using System;
 namespace MultiMonitorHelper.DisplayModels.Win7.Enum
 {
     [Flags]
-    public enum QueryDisplayFlags : uint
+    internal enum QueryDisplayFlags : uint
     {
         Zero = 0x0,
 

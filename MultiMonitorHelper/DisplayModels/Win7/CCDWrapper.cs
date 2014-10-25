@@ -5,11 +5,8 @@ using MultiMonitorHelper.DisplayModels.Win7.Struct;
 
 namespace MultiMonitorHelper.DisplayModels.Win7
 {
-	/// <summary>
-	/// This class takes care of wrapping "Connecting and Configuring Displays(CCD) Win32 API"
-	/// Author Erti-Chris Eelmaa || easter199 at hotmail dot com
-	/// </summary>
-	public class CCDWrapper
+// ReSharper disable once InconsistentNaming
+	internal class CCDWrapper
 	{
 		[DllImport("User32.dll")]
 		public static extern StatusCode SetDisplayConfig(

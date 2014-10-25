@@ -3,7 +3,7 @@ using System;
 namespace MultiMonitorHelper.DisplayModels.Win7.Enum
 {
     [Flags]
-    public enum D3DmdtVideoSignalStandard : uint
+    internal enum D3DmdtVideoSignalStandard : uint
     {
         Uninitialized = 0,
         VesaDmt = 1,

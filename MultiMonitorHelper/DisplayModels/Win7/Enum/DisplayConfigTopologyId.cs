@@ -3,7 +3,7 @@ using System;
 namespace MultiMonitorHelper.DisplayModels.Win7.Enum
 {
     [Flags]
-    public enum DisplayConfigTopologyId : uint
+    internal enum DisplayConfigTopologyId : uint
     {
         Zero = 0x0,
 

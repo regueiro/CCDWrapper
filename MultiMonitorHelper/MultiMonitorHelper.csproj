@@ -45,14 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\AbstractDisplay.cs" />
     <Compile Include="Common\AbstractDisplayModel.cs" />
+    <Compile Include="Common\DisplaySettings.cs" />
     <Compile Include="Common\Enum\DisplayRotation.cs" />
-    <Compile Include="Common\Enum\DisplaySettings.cs" />
     <Compile Include="Common\Interfaces\IDisplayModel.cs" />
     <Compile Include="Common\Interfaces\IDisplay.cs" />
     <Compile Include="DisplayFactory.cs" />
-    <Compile Include="DisplayModels\Win7\EnumExtension.cs" />
     <Compile Include="DisplayModels\Win7\Enum\D3DmtVideoSignalStandard.cs" />
     <Compile Include="DisplayModels\Win7\Enum\DisplayConfigDeviceInfoType.cs" />
     <Compile Include="DisplayModels\Win7\Enum\DisplayConfigFlags.cs" />
@@ -65,6 +63,7 @@
     <Compile Include="DisplayModels\Win7\Enum\DisplayConfigTargetStatus.cs" />
     <Compile Include="DisplayModels\Win7\Enum\DisplayConfigTopologyId.cs" />
     <Compile Include="DisplayModels\Win7\Enum\DisplayConfigVideoOutputTechnology.cs" />
+    <Compile Include="DisplayModels\Win7\Enum\EnumExtension.cs" />
     <Compile Include="DisplayModels\Win7\Enum\QueryDisplayFlags.cs" />
     <Compile Include="DisplayModels\Win7\Enum\SdcFlags.cs" />
     <Compile Include="DisplayModels\Win7\CCDWrapper.cs" />

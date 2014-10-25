@@ -3,7 +3,7 @@
 namespace MultiMonitorHelper.DisplayModels.Win7.Struct
 {
 	[StructLayout(LayoutKind.Sequential)]
-	public struct DisplayConfigTargetPreferredMode : IDisplayConfigInfo
+	internal struct DisplayConfigTargetPreferredMode : IDisplayConfigInfo
 	{
 		public DisplayConfigDeviceInfoHeader header;
 		public uint width;

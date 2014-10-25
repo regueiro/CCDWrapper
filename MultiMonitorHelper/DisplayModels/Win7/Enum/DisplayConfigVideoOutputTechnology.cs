@@ -3,7 +3,7 @@ using System;
 namespace MultiMonitorHelper.DisplayModels.Win7.Enum
 {
     [Flags]
-    public enum DisplayConfigVideoOutputTechnology : uint
+    internal enum DisplayConfigVideoOutputTechnology : uint
     {
         Other = 4294967295, // -1
         Hd15 = 0,

@@ -3,7 +3,7 @@ using System;
 namespace MultiMonitorHelper.DisplayModels.Win7.Enum
 {
     [Flags]
-    public enum DisplayConfigRotation : uint
+    internal enum DisplayConfigRotation : uint
     {
         Zero = 0x0,
 

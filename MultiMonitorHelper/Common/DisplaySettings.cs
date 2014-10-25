@@ -1,6 +1,7 @@
 ﻿using System.Drawing;
+using MultiMonitorHelper.Common.Enum;
 
-namespace MultiMonitorHelper.Common.Enum
+namespace MultiMonitorHelper.Common
 {
     public struct DisplaySettings
     {
@@ -44,7 +45,7 @@ namespace MultiMonitorHelper.Common.Enum
         /// <param name="refreshRate">See RefreshRate property.</param>
         /// <param name="isPrimary">See IsPrimary property.</param>
         /// <param name="name">See Name property.</param>
-        public DisplaySettings(Size resolution, Point origin, DisplayRotation rotation, 
+        public DisplaySettings(Size resolution, Point origin, DisplayRotation rotation,
             int refreshRate, bool isPrimary, string name) : this()
         {
             Resolution = resolution;

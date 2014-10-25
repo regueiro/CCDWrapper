@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
-using MultiMonitorHelper.Common.Enum;
+using MultiMonitorHelper.Common;
 using MultiMonitorHelper.Common.Interfaces;
 using MultiMonitorHelper.DisplayModels.Win7.Enum;
 using MultiMonitorHelper.DisplayModels.Win7.Struct;
@@ -35,7 +35,7 @@ namespace MultiMonitorHelper.DisplayModels.Win7
             // TODO; MAKE SURE THAT IT IS POSSIBLE TO DIVIDE THIS
             // WHAT IF DENOMINATOR IS ZERO?!
             var refreshRate =
-                (int)Math.Round((double)path.targetInfo.refreshRate.numerator / path.targetInfo.refreshRate.denominator);
+                (int) Math.Round((double) path.targetInfo.refreshRate.numerator/path.targetInfo.refreshRate.denominator);
             var rotationOriginal = path.targetInfo.rotation;
             var isPrimary = IsPrimaryDisplay(origin);
 
@@ -49,8 +49,8 @@ namespace MultiMonitorHelper.DisplayModels.Win7
                 displayName = displayConfigSourceDeviceName.viewGdiDeviceName;
 
             return new Win7Display(new DisplaySettings(resolution, origin,
-                                                       rotationOriginal.ToScreenRotation(), refreshRate, isPrimary,
-                                                       displayName));
+                rotationOriginal.ToScreenRotation(), refreshRate, isPrimary,
+                displayName));
         }
 
         /// <summary>
@@ -84,16 +84,15 @@ namespace MultiMonitorHelper.DisplayModels.Win7
             var modeInfoArray = new DisplayConfigModeInfo[numModeInfoArrayElements];
 
             // topology ID only valid with QDC_DATABASE_CURRENT
-            var queryDisplayStatus = pathType == QueryDisplayFlags.DatabaseCurrent ?
-                CCDWrapper.QueryDisplayConfig(
-                pathType,
-                ref numPathArrayElements, pathInfoArray,
-                ref numModeInfoArrayElements, modeInfoArray, out topologyId) :
-
-                CCDWrapper.QueryDisplayConfig(
-                pathType,
-                ref numPathArrayElements, pathInfoArray,
-                ref numModeInfoArrayElements, modeInfoArray);
+            var queryDisplayStatus = pathType == QueryDisplayFlags.DatabaseCurrent
+                ? CCDWrapper.QueryDisplayConfig(
+                    pathType,
+                    ref numPathArrayElements, pathInfoArray,
+                    ref numModeInfoArrayElements, modeInfoArray, out topologyId)
+                : CCDWrapper.QueryDisplayConfig(
+                    pathType,
+                    ref numPathArrayElements, pathInfoArray,
+                    ref numModeInfoArrayElements, modeInfoArray);
             //////////////////////
 
             if (queryDisplayStatus != StatusCode.Success)
@@ -108,10 +107,10 @@ namespace MultiMonitorHelper.DisplayModels.Win7
             {
                 var outputModes = new List<DisplayConfigModeInfo>();
                 foreach (var modeIndex in new[]
-                                          {
-                                              path.sourceInfo.modeInfoIdx,
-                                              path.targetInfo.modeInfoIdx
-                                          })
+                {
+                    path.sourceInfo.modeInfoIdx,
+                    path.targetInfo.modeInfoIdx
+                })
                 {
                     if (modeIndex >= 0 && modeIndex < modeInfoArray.Length)
                         outputModes.Add(modeInfoArray[modeIndex]);
@@ -141,33 +140,12 @@ namespace MultiMonitorHelper.DisplayModels.Win7
                     id = sourceModeInfo.id,
                     size =
                         Marshal.SizeOf(
-                            typeof(DisplayConfigSourceDeviceName)),
+                            typeof (DisplayConfigSourceDeviceName)),
                     type = DisplayConfigDeviceInfoType.GetSourceName,
                 }
             };
 
             return CCDWrapper.DisplayConfigGetDeviceInfo(ref displayConfigSourceDeviceName);
-        }
-
-        private static StatusCode GetDisplayConfigTargetDeviceName(
-            DisplayConfigModeInfo targetModeInfo,
-            out DisplayConfigTargetDeviceName displayConfigTargetDeviceName)
-        {
-            displayConfigTargetDeviceName = new DisplayConfigTargetDeviceName
-            {
-                header = new DisplayConfigDeviceInfoHeader
-                {
-                    adapterId = targetModeInfo.adapterId,
-                    id = targetModeInfo.id,
-                    size =
-                        Marshal.SizeOf(
-                            typeof(DisplayConfigTargetDeviceName)),
-                    type = DisplayConfigDeviceInfoType.GetTargetName,
-                }
-            };
-
-
-            return CCDWrapper.DisplayConfigGetDeviceInfo(ref displayConfigTargetDeviceName);
         }
     }
 }

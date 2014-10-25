@@ -3,7 +3,7 @@
     /// <summary>
     /// Use this enum so that you don't have to hardcode magic values.
     /// </summary>
-    public enum StatusCode : uint
+    internal enum StatusCode : uint
     {
         Success = 0,
         InvalidParameter = 87,

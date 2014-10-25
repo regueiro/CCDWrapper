@@ -3,7 +3,7 @@
 namespace MultiMonitorHelper.DisplayModels.Win7.Struct
 {
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
-    public struct DisplayConfigSetTargetPersistence : IDisplayConfigInfo
+    internal struct DisplayConfigSetTargetPersistence : IDisplayConfigInfo
     {
         public DisplayConfigDeviceInfoHeader header;
 

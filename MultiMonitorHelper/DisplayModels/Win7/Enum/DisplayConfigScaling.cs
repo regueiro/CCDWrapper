@@ -3,7 +3,7 @@ using System;
 namespace MultiMonitorHelper.DisplayModels.Win7.Enum
 {
     [Flags]
-    public enum DisplayConfigScaling : uint
+    internal enum DisplayConfigScaling : uint
     {
         Zero = 0x0,
 

@@ -1,9 +1,8 @@
 ﻿using MultiMonitorHelper.Common.Enum;
-using MultiMonitorHelper.DisplayModels.Win7.Enum;
 
-namespace MultiMonitorHelper.DisplayModels.Win7
+namespace MultiMonitorHelper.DisplayModels.Win7.Enum
 {
-    public static class EnumExtension
+    internal static class EnumExtension
     {
         /// <summary>
         /// This is enum mapper. Essentially it maps from display-model specific to

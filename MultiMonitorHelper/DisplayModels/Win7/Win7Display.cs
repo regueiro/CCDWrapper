@@ -5,7 +5,7 @@ using MultiMonitorHelper.Common.Interfaces;
 
 namespace MultiMonitorHelper.DisplayModels.Win7
 {
-    public class Win7Display : AbstractDisplay, IDisplay
+    public class Win7Display : IDisplay
     {
         /// <summary>
         /// Initialize new instance of Win7Display

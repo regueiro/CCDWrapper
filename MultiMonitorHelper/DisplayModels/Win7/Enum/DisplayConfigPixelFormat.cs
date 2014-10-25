@@ -3,7 +3,7 @@ using System;
 namespace MultiMonitorHelper.DisplayModels.Win7.Enum
 {
     [Flags]
-    public enum DisplayConfigPixelFormat : uint
+    internal enum DisplayConfigPixelFormat : uint
     {
         Zero = 0x0,
 

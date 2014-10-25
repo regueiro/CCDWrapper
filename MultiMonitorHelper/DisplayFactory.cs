@@ -9,7 +9,7 @@ namespace MultiMonitorHelper
     /// Simple display factory class that will choose correct implementation,
     /// based on an operating system.
     /// </summary>
-    public class DisplayFactory
+    public sealed class DisplayFactory
     {
         private static IDisplayModel _displayModel;
         private static readonly object Lock = new object();
@@ -31,6 +31,7 @@ namespace MultiMonitorHelper
                 // OR DO WE NEED TO CREATE ANOTHER DISPLAYMODEL?!
 
                 // ALSO, ARE WE AIMING FOR THREAD-SAFETY?!
+
                 var osVersion = Environment.OSVersion;
                 var isWin7 = (osVersion.Version.Major == 6 && osVersion.Version.Minor == 1);
 

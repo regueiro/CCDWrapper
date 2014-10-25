@@ -1,6 +1,6 @@
 namespace MultiMonitorHelper.DisplayModels.Win7.Enum
 {
-	public enum DisplayConfigDeviceInfoType : uint
+	internal enum DisplayConfigDeviceInfoType : uint
 	{
 		GetSourceName = 1,
 		GetTargetName = 2,

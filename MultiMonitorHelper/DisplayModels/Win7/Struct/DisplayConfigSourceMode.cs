@@ -4,7 +4,7 @@ using MultiMonitorHelper.DisplayModels.Win7.Enum;
 namespace MultiMonitorHelper.DisplayModels.Win7.Struct
 {
     [StructLayout(LayoutKind.Sequential)]
-    public struct DisplayConfigSourceMode
+    internal struct DisplayConfigSourceMode
     {
         public int width;
         public int height;

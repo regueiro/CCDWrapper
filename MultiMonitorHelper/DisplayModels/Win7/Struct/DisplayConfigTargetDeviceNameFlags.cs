@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 namespace MultiMonitorHelper.DisplayModels.Win7.Struct
 {
 	[StructLayout(LayoutKind.Explicit)]
-	public struct DisplayConfigTargetDeviceNameFlags
+	internal struct DisplayConfigTargetDeviceNameFlags
 	{
 		[FieldOffset(0)] private readonly uint _raw;
 		[FieldOffset(0)] public uint value;

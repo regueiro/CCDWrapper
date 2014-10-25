@@ -4,7 +4,7 @@ using MultiMonitorHelper.DisplayModels.Win7.Enum;
 namespace MultiMonitorHelper.DisplayModels.Win7.Struct
 {
 	[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode, Pack=1)]
-	public struct DisplayConfigTargetDeviceName : IDisplayConfigInfo
+	internal struct DisplayConfigTargetDeviceName : IDisplayConfigInfo
 	{
 		public DisplayConfigDeviceInfoHeader header;
 		public DisplayConfigTargetDeviceNameFlags flags;

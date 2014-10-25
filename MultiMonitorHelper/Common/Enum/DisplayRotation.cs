@@ -1,8 +1,11 @@
-﻿namespace MultiMonitorHelper.Common.Enum
+﻿using System;
+
+namespace MultiMonitorHelper.Common.Enum
 {
     /// <summary>
     /// Indicates degrees of current display.
     /// </summary>
+    [Flags]
     public enum DisplayRotation
     {
         /// <summary>

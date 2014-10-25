@@ -3,7 +3,7 @@ using System;
 namespace MultiMonitorHelper.DisplayModels.Win7.Enum
 {
     [Flags]
-    public enum SdcFlags : uint
+    internal enum SdcFlags : uint
     {
         Zero = 0,
 
