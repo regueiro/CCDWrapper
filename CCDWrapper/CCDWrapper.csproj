@@ -1,21 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8BC32EA5-B325-47D0-94E7-FD60110393C8}</ProjectGuid>
+    <ProjectGuid>{08C37441-F971-4277-901C-315C7D8E4464}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MultiMonitorHelper</RootNamespace>
-    <AssemblyName>MultiMonitorHelper</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>CCDWrapper</RootNamespace>
+    <AssemblyName>CCDWrapper</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -37,7 +33,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,66 +40,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\AbstractDisplayModel.cs" />
-    <Compile Include="Common\DisplaySettings.cs" />
-    <Compile Include="Common\Enum\DisplayRotation.cs" />
-    <Compile Include="Common\Interfaces\IDisplayModel.cs" />
-    <Compile Include="Common\Interfaces\IDisplay.cs" />
-    <Compile Include="DisplayFactory.cs" />
-    <Compile Include="DisplayModels\Win7\Enum\D3DmtVideoSignalStandard.cs" />
-    <Compile Include="DisplayModels\Win7\Enum\DisplayConfigDeviceInfoType.cs" />
-    <Compile Include="DisplayModels\Win7\Enum\DisplayConfigFlags.cs" />
-    <Compile Include="DisplayModels\Win7\Enum\DisplayConfigModeInfoType.cs" />
-    <Compile Include="DisplayModels\Win7\Enum\DisplayConfigPixelFormat.cs" />
-    <Compile Include="DisplayModels\Win7\Enum\DisplayConfigRotation.cs" />
-    <Compile Include="DisplayModels\Win7\Enum\DisplayConfigScaling.cs" />
-    <Compile Include="DisplayModels\Win7\Enum\DisplayConfigScanLineOrdering.cs" />
-    <Compile Include="DisplayModels\Win7\Enum\DisplayConfigSourceStatus.cs" />
-    <Compile Include="DisplayModels\Win7\Enum\DisplayConfigTargetStatus.cs" />
-    <Compile Include="DisplayModels\Win7\Enum\DisplayConfigTopologyId.cs" />
-    <Compile Include="DisplayModels\Win7\Enum\DisplayConfigVideoOutputTechnology.cs" />
-    <Compile Include="DisplayModels\Win7\Enum\EnumExtension.cs" />
-    <Compile Include="DisplayModels\Win7\Enum\QueryDisplayFlags.cs" />
-    <Compile Include="DisplayModels\Win7\Enum\SdcFlags.cs" />
-    <Compile Include="DisplayModels\Win7\CCDWrapper.cs" />
-    <Compile Include="DisplayModels\Win7\Enum\StatusCode.cs" />
-    <Compile Include="DisplayModels\Win7\IDisplayConfigInfo.cs" />
-    <Compile Include="DisplayModels\Win7\Struct\DisplayConfig2DRegion.cs" />
-    <Compile Include="DisplayModels\Win7\Struct\DisplayConfigAdapterName.cs" />
-    <Compile Include="DisplayModels\Win7\Struct\DisplayConfigDeviceInfoHeader.cs" />
-    <Compile Include="DisplayModels\Win7\Struct\DisplayConfigModeInfo.cs" />
-    <Compile Include="DisplayModels\Win7\Struct\DisplayConfigPathInfo.cs" />
-    <Compile Include="DisplayModels\Win7\Struct\DisplayConfigPathSourceInfo.cs" />
-    <Compile Include="DisplayModels\Win7\Struct\DisplayConfigPathTargetInfo.cs" />
-    <Compile Include="DisplayModels\Win7\Struct\DisplayConfigPathWrap.cs" />
-    <Compile Include="DisplayModels\Win7\Struct\DisplayConfigRational.cs" />
-    <Compile Include="DisplayModels\Win7\Struct\DisplayConfigSetTargetPersistence.cs" />
-    <Compile Include="DisplayModels\Win7\Struct\DisplayConfigSourceDeviceName.cs" />
-    <Compile Include="DisplayModels\Win7\Struct\DisplayConfigSourceMode.cs" />
-    <Compile Include="DisplayModels\Win7\Struct\DisplayConfigTargetDeviceName.cs" />
-    <Compile Include="DisplayModels\Win7\Struct\DisplayConfigTargetDeviceNameFlags.cs" />
-    <Compile Include="DisplayModels\Win7\Struct\DisplayConfigTargetMode.cs" />
-    <Compile Include="DisplayModels\Win7\Struct\DisplayConfigTargetPreferredMode.cs" />
-    <Compile Include="DisplayModels\Win7\Struct\DisplayConfigVideoSignalInfo.cs" />
-    <Compile Include="DisplayModels\Win7\Struct\LUID.cs" />
-    <Compile Include="DisplayModels\Win7\Struct\PointL.cs" />
-    <Compile Include="DisplayModels\Win7\Win7DisplayModel.cs" />
-    <Compile Include="DisplayModels\Win7\Win7Display.cs" />
-    <Compile Include="DisplayModels\Win7\Win7DisplayModel.Helper.cs">
-      <DependentUpon>Win7DisplayModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DisplayModels\XP\EnumExtension.cs" />
-    <Compile Include="DisplayModels\XP\Enum\CdsFlags.cs" />
-    <Compile Include="DisplayModels\XP\Enum\DispChange.cs" />
-    <Compile Include="DisplayModels\XP\Enum\DisplayDeviceStateFlags.cs" />
-    <Compile Include="DisplayModels\XP\Enum\DevModeFlags.cs" />
-    <Compile Include="DisplayModels\XP\Enum\Rotation.cs" />
-    <Compile Include="DisplayModels\XP\Struct\DevMode.cs" />
-    <Compile Include="DisplayModels\XP\Struct\DisplayDevice.cs" />
-    <Compile Include="DisplayModels\XP\XPDisplayModel.cs" />
-    <Compile Include="DisplayModels\XP\XPDisplay.cs" />
-    <Compile Include="DisplayModels\XP\XPWrapper.cs" />
+    <Compile Include="CCDWrapper.cs" />
+    <Compile Include="Enum\D3DmtVideoSignalStandard.cs" />
+    <Compile Include="Enum\DisplayConfigDeviceInfoType.cs" />
+    <Compile Include="Enum\DisplayConfigFlags.cs" />
+    <Compile Include="Enum\DisplayConfigModeInfoType.cs" />
+    <Compile Include="Enum\DisplayConfigPixelFormat.cs" />
+    <Compile Include="Enum\DisplayConfigRotation.cs" />
+    <Compile Include="Enum\DisplayConfigScaling.cs" />
+    <Compile Include="Enum\DisplayConfigScanLineOrdering.cs" />
+    <Compile Include="Enum\DisplayConfigSourceStatus.cs" />
+    <Compile Include="Enum\DisplayConfigTargetStatus.cs" />
+    <Compile Include="Enum\DisplayConfigTopologyId.cs" />
+    <Compile Include="Enum\DisplayConfigVideoOutputTechnology.cs" />
+    <Compile Include="Enum\QueryDisplayFlags.cs" />
+    <Compile Include="Enum\SdcFlags.cs" />
+    <Compile Include="Enum\StatusCode.cs" />
+    <Compile Include="IDisplayConfigInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Struct\DisplayConfig2DRegion.cs" />
+    <Compile Include="Struct\DisplayConfigAdapterName.cs" />
+    <Compile Include="Struct\DisplayConfigDeviceInfoHeader.cs" />
+    <Compile Include="Struct\DisplayConfigModeInfo.cs" />
+    <Compile Include="Struct\DisplayConfigPathInfo.cs" />
+    <Compile Include="Struct\DisplayConfigPathSourceInfo.cs" />
+    <Compile Include="Struct\DisplayConfigPathTargetInfo.cs" />
+    <Compile Include="Struct\DisplayConfigPathWrap.cs" />
+    <Compile Include="Struct\DisplayConfigRational.cs" />
+    <Compile Include="Struct\DisplayConfigSetTargetPersistence.cs" />
+    <Compile Include="Struct\DisplayConfigSourceDeviceName.cs" />
+    <Compile Include="Struct\DisplayConfigSourceMode.cs" />
+    <Compile Include="Struct\DisplayConfigTargetDeviceName.cs" />
+    <Compile Include="Struct\DisplayConfigTargetDeviceNameFlags.cs" />
+    <Compile Include="Struct\DisplayConfigTargetMode.cs" />
+    <Compile Include="Struct\DisplayConfigTargetPreferredMode.cs" />
+    <Compile Include="Struct\DisplayConfigVideoSignalInfo.cs" />
+    <Compile Include="Struct\Luid.cs" />
+    <Compile Include="Struct\PointL.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
