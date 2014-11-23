@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace CCDWrapper.Struct
+namespace CCD.Struct
 {
     [StructLayout(LayoutKind.Explicit)]
     public struct DisplayConfigTargetDeviceNameFlags

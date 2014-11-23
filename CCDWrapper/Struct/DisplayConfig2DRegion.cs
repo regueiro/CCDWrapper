@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace CCDWrapper.Struct
+namespace CCD.Struct
 {
     [StructLayout(LayoutKind.Sequential)]
     public struct DisplayConfig2DRegion

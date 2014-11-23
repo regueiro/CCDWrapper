@@ -1,4 +1,4 @@
-namespace CCDWrapper.Enum
+namespace CCD.Enum
 {
     public enum DisplayConfigDeviceInfoType : uint
     {

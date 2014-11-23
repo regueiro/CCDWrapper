@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CCDWrapper.cs" />
+    <Compile Include="Wrapper.cs" />
     <Compile Include="Enum\D3DmtVideoSignalStandard.cs" />
     <Compile Include="Enum\DisplayConfigDeviceInfoType.cs" />
     <Compile Include="Enum\DisplayConfigFlags.cs" />

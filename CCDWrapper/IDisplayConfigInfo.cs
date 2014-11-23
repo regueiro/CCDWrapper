@@ -1,4 +1,4 @@
-﻿namespace CCDWrapper
+﻿namespace CCD
 {
     /// <summary>
     /// Just an contract.

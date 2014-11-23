@@ -1,7 +1,7 @@
 ﻿using System.Runtime.InteropServices;
-using CCDWrapper.Enum;
+using CCD.Enum;
 
-namespace CCDWrapper.Struct
+namespace CCD.Struct
 {
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode, Pack = 1)]
     public struct DisplayConfigTargetDeviceName : IDisplayConfigInfo

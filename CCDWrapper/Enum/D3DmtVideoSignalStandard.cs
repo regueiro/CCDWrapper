@@ -1,6 +1,6 @@
 using System;
 
-namespace CCDWrapper.Enum
+namespace CCD.Enum
 {
     [Flags]
     public enum D3DmdtVideoSignalStandard : uint

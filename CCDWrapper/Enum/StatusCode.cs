@@ -1,4 +1,4 @@
-﻿namespace CCDWrapper.Enum
+﻿namespace CCD.Enum
 {
     /// <summary>
     /// Use this enum so that you don't have to hardcode magic values.

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace CCDWrapper.Struct
+namespace CCD.Struct
 {
     /// <summary>
     /// This class is used in order to wrap path and mode info.

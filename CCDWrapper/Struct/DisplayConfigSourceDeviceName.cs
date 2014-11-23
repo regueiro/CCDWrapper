@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace CCDWrapper.Struct
+namespace CCD.Struct
 {
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
     public struct DisplayConfigSourceDeviceName : IDisplayConfigInfo

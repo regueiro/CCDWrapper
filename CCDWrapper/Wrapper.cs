@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.InteropServices;
-using CCDWrapper.Enum;
-using CCDWrapper.Struct;
+using CCD.Enum;
+using CCD.Struct;
 
-namespace CCDWrapper
+namespace CCD
 {
     // ReSharper disable once InconsistentNaming
-    public class CCDWrapper
+    public class Wrapper
     {
         [DllImport("User32.dll")]
         public static extern StatusCode SetDisplayConfig(
