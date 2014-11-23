@@ -5,6 +5,16 @@ A C# API for [Connecting and Configuring Displays](http://msdn.microsoft.com/en-
 
 Created by Erti-Chris Eelmaa: [ChrisEelmaa/MultiMonitorHelper](https://github.com/ChrisEelmaa/MultiMonitorHelper)
 
+##NuGet
+
+To install CCDWrapper , run the following command in the Package Manager Console 
+
+```
+Install-Package CCDWrapper
+```
+
+https://www.nuget.org/packages/CCDWrapper
+
 
 ##The MIT License
 
