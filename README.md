@@ -7,7 +7,7 @@ Created by Erti-Chris Eelmaa: [ChrisEelmaa/MultiMonitorHelper](https://github.co
 
 ##NuGet
 
-To install CCDWrapper , run the following command in the Package Manager Console 
+To install CCDWrapper, run the following command in the Package Manager Console 
 
 ```
 Install-Package CCDWrapper
